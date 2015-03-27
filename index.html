@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    
+    <style type="text/css">
+    
+    body{
+        margin: 0px; background: url(images/bg.jpg) fixed;
+    }
+        
+        
+        
+    #parallax_layer_1 {
+        position: fixed;
+        background: url(images/parallax_bg1.png) no-repeat 0px 200px;
+        width: 100%;
+        height: 800px;
+    }
+        
+    #parallax_layer_2 {
+        position: fixed;
+        background: url(images/parallax_bg2.png) no-repeat 200px 400px;
+        width: 100%;
+        height: 1000px;
+    }
+        
+        
+    #content_layer {
+        color: #fff;
+        position: absolute;
+    }
+        
+        
+    </style>
+
+    
+    <script>
+        function parallax(){
+            var parallax_layer_1 = document.getElementById('parallax_layer_1');
+             var parallax_layer_2 = document.getElementById('parallax_layer_2');
+            
+            // movement logic 
+            parallax_layer_1.style.top = -(window.pageYOffset / 4) + 'px';
+            parallax_layer_2.style.top = -(window.pageYOffset / 10) + 'px';
+        }
+        
+    window.addEventListener("scroll", parallax, false);    
+    </script>
+    
+</head>
+    
+    
+<body>
+
+<div id="parallax_layer_1"></div>
+<div id="parallax_layer_2"></div>
+    
+<div id="content_layer">    
+<script src="js/content.js"></script>
+    </div>
+    
+    
+</body>
+    
+    
+</html>
