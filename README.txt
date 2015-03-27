@@ -1,0 +1,1 @@
+This code gives you an understanding how Parallax works.  Thank you. 
